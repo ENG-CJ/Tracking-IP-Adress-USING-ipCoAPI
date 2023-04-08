@@ -4,4 +4,4 @@ i will track your device location include your public ip address (not Private)<b
 to verify visit or click this link : [https://eng-cj.github.io/Tracking-IP-Adress-USING-ipCoAPI/]
 
 #screen
-![](ip.PNG)
+![](ip2.PNG)
