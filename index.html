@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modules Assignment</title>
+    <link rel="stylesheet" href="style.css">
+   <style>
+    .countries{
+      background-color: white;
+      box-shadow: 0px 4px 8px 3px rgba(0,0,0,0.6);
+      padding: 20px;
+      margin: 20px 10px;
+    }
+    .country{
+      width: 100%;
+      padding: 10px;
+      margin: 10px 10px;
+      border-radius: 3px;
+    }
+    .group{
+      padding: 9px 9px ;
+    }
+    .group label{
+      font-weight: bold;
+      font-size: 20px;
+
+    }
+   </style>
+
+</head>
+<body>
+  
+  
+
+  <div class="countries">
+
+    <div class="group">
+      <label for="">IP Address: </label>
+      <span class="ip">192.17891.192819</span>
+    </div>
+    <div class="group">
+      <label for="">Country: </label>
+      <span class="country">192.17891.192819</span>
+    </div>
+    <div class="group">
+      <label for="">City: </label>
+      <span class="city">192.17891.192819</span>
+    </div>
+    <div class="group">
+      <label for="">Network: </label>
+      <span class="network">192.17891.192819</span>
+    </div>
+    <div class="group">
+      <label for="">Country Code: </label>
+      <span class="code">192.17891.192819</span>
+    </div>
+ 
+
+  </div>
+
+
+  <script src="./jquery-3.3.1.min.js"></script>
+
+  <script>
+
+
+
+const request=()=>{
+
+
+  fetch("https://ipapi.co/json/")
+.then(response => response.json())
+.then(result => {
+ 
+    console.log(result)
+    $(".ip").text(result.ip)
+    $(".country").text(result.country_name)
+    $(".code").text(result.country_code)
+    $(".city").text(result.city)
+    $(".network").text(result.network)
+
+})
+.catch(error => console.log('error', error));
+
+
+}
+request();
+  </script>
+</body>
+</html>
